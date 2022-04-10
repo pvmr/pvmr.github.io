@@ -37,7 +37,7 @@
 
             /* First image (Logo. Full height) */
             .bgimg-1 {
-                background-image: url(assets/romain-dancre-doplSDELX7E-unsplash.jpg);
+                background-image: url(assets/towfiqu-barbhuiya-05XcCfTOzN4-unsplash.jpg);
                 min-height: 100%;
             }
 
@@ -77,24 +77,26 @@
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-        <div class="w3-bar" id="myNavbar">
+        <div class="w3-bar w3-text-black" id="myNavbar">
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
                 href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
             <a href="#home" class="w3-bar-item w3-button">HOME</a>
+			<a href="#mrates" class="w3-bar-item w3-button w3-hide-small">% RATES</a>			
             <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+            <a href="#apply" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
                 APPLY NOW
             </a>
         </div>
 
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+			<a href="#mrates" class="w3-bar-item w3-button" onclick="toggleFunction()">% RATES</a>			
             <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
             <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button">APPLY NOW</a>
+            <a href="#apply" class="w3-bar-item w3-button">APPLY NOW</a>
         </div>
     </div>
 
@@ -106,7 +108,36 @@
         </div>
     </div>
 
-
+	<div class="w3-content w3-container w3-padding-64" id="mrates">
+		<hr>
+		<div class="w3-center">
+			<h3>% RATES</h3>
+		</div>
+		<div class="w3-responsive w3-card-4">
+        <div id='RateTable'></div>
+		  <script type="text/javascript"charset="utf-8">
+			 var data = 'Term,Posted Rate,Our Rate \n6 months,3.04%,2.89% \n1 year,2.79%,2.74% \n2 years,3.54%,3.49% \n3 years,3.89%,3.69% \n4 Years,4.14%,3.89% \n5 years,4.99%,3.89% \n7 years,5.35%,4.19% \n10 years,5.60%,4.35% \nBridge Loan,n/a \nHELOC,Prime + 0.50 \nVariable rate,(P-0.90)% \nPrime rate,2.70% (TD:2.85%) \n';
+			 var lines = data.split("\n"),
+			 output = [], i;
+			 for (i = 0; i < 13; i++) {
+				if (i == 0)
+					output.push("<thead><tr class=\"w3-black\"><td class=\"w3-center\">"+ lines[i].slice(0,-1).split(",").join("</td><td class=\"w3-center\">") + "</td></tr></thead>");
+				else if (i == 6)
+					output.push("<tr><td class=\"w3-center\"><b>"+ lines[i].slice(0,-1).split(",").join("</b></td><td class=\"w3-center\"><b>") + "</b></td></tr>");
+				else if (i < 9)
+					output.push("<tr><td class=\"w3-center\">"+ lines[i].slice(0,-1).split(",").join("</td><td class=\"w3-center\">") + "</td></tr>");
+				else
+					output.push("<tr><td colspan=\"2\" class=\"w3-center\">"+ lines[i].slice(0,-1).split(",").join("</td><td class=\"w3-center\">") + "</td></tr>");
+				}
+			 output = "<table class=\"w3-table w3-striped w3-bordered\" style=\"table-layout: auto;\">" + output.join("") + "</table>";
+			 var div = document.getElementById('RateTable');			 
+			 div.innerHTML = output;
+		  </script>
+		</div>
+		<p class="w3-center"><em>Rates updated on Apr 7,2022. Rates may vary provincially and are indicative for qualified buyers only and may be subject to change without notice.
+		Please contact me for the most current figures.</em></p>
+		<p class="w3-center"><a href="#apply" class="w3-grey w3-button w3-hover-red"> APPLY NOW </a></p>
+	</div>
     <!-- Container (About Section) -->
     <div class="w3-content w3-container w3-padding-64" id="about">
         <h3 class="w3-center">ABOUT ME</h3>
@@ -121,7 +152,7 @@ Please feel free to call or email me to set up a meeting and address your mortga
         <div class="w3-row w3-center" >
 			<div class="w3-third">
 				<div class="w3-card w3-container" style="min-height:150px">
-				<p><a href="#" class="w3-grey w3-button w3-hover-red">
+				<p><a href="#apply" class="w3-grey w3-button w3-hover-red">
                 APPLY NOW </a></p>
 				<p><a href="#contact" class="w3-grey w3-button w3-hover-red">
                 CONTACT </a><p>
@@ -132,15 +163,15 @@ Please feel free to call or email me to set up a meeting and address your mortga
 				<div class="w3-card w3-container" style="min-height:150px">
                 <b>Vamsi Pulagam</b><br>
 				Mortgage Agent<br>
-				License# M22001229<br>
+				License #M22001229<br>
 				<i class="fa fa-envelope">&nbsp;</i><a href="mailto:pvmreddy@msn.com">pvmreddy@msn.com</a><br>
 				<i class="fa fa-phone">&nbsp;</i><a href="tel:+16133024493">+1 (613) 302-4493</a>
             </div>
 			</div>            
             <div class="w3-third">
 				<div class="w3-card w3-container" style="min-height:150px">
-                <a href="https://nvrmortgages.com/"><img src="https://nvrmortgages.com/images/logo-footer.png" class="w3-image w3-round" style="width:auto"><br></a>
-				Brokerage License # 11055
+                <a href="https://nvrmortgages.com/"><img src="https://nvrmortgages.com/images/logo-footer.png" class="w3-image w3-round" style="width:auto;opacity:50%"><br></a>
+				Brokerage License #11055
             </div>
 			</div>
         </div>      
@@ -168,42 +199,16 @@ Please feel free to call or email me to set up a meeting and address your mortga
                 </div>
             </div>
 			
-			<div class="w3-half">
-                <div class="w3-large w3-margin-bottom">
-				Leave me a message
-			<form action="/action_page.php" target="_blank">
-                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                        </div>
-                        <div class="w3-half">
-                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                        </div>
-                    </div>
-                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                    <button class="w3-button w3-black w3-right w3-section" type="submit">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                    </button>
-                </form>
-			</div>
+			<div class="w3-half" id="apply">
+                <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAIBAAGBTxFUNTU5NzNLMkZHMDE2RzNDNlJLMTlCSVUxNS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
             </div>
         </div>
     </div>
 
     <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <div class="w3-xlarge w3-section">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-    <a class="w3-button w3-round-xxlarge w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
-    <!-- Footer end. -->
-    </footer>
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">		
+		<p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+	</footer>
 
     <script>
         // Modal Image Gallery
@@ -219,7 +224,7 @@ Please feel free to call or email me to set up a meeting and address your mortga
         function myFunction() {
             var navbar = document.getElementById("myNavbar");
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+                navbar.className = "w3-bar w3-text-black" + " w3-card" + " w3-animate-top" + " w3-white";
             } else {
                 navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
             }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Purchase, renew or refinance mortgages with Vamsi Pulagam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+<form class="w3-container w3-card-4">
+  <h2>Mortgage Request</h2>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Name</label>
+  </div>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Email</label>
+  </div>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Phone</label>
+  </div>
+
+  <div class="w3-row">
+   
+    <div class="w3-half">
+		<h5> I'm looking for</h5>
+		<input id="mortgage" class="w3-radio" type="radio" name="request" value="New Mortgage" checked>
+		<label>New Mortgage</label>
+		<br>
+		<input id="renewal" class="w3-radio" type="radio" name="request" value="Mortgage Renewal">
+		<label>Mortgage Renewal (or Switch to a new lender)</label>
+		<br>
+		<input id="refinance" class="w3-radio" type="radio" name="request" value="Mortgage Refinance" >
+		<label> Mortgage Refinance</label>
+		<br>
+		<input id="heloc" class="w3-radio" type="radio" name="request" value="HELOC" >
+		<label> Mortgage Refinance</label>
+		<br>
+		<input id="other" class="w3-radio" type="radio" name="request" value="other" >
+		<label> Other</label>
+		<br>
+    </div>
+	
+	<div class="w3-half">
+		<input class="w3-input" type="text" required>
+		<label>Additional Details (optional)</label>
+    </div>	
+  </div>
+  <p class="w3-center"><button class="w3-grey w3-button w3-hover-red"> SUBMIT </button></p>
+</form>
+
+    
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar w3-text-black" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

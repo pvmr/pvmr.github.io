@@ -1,14 +1,28 @@
-BEGIN:VCARD
-VERSION:3.0
-PRODID:-//Apple Inc.//iPhone OS 15.3.1//EN
-N:Pulagam;Vamsi ;;;
-FN:Vamsi  Pulagam
-ORG:NVR Mortgages;
-TITLE:Mortgage Agent 
-EMAIL;type=INTERNET;type=HOME;type=pref:vamsi@pvmr.ca
-TEL;type=CELL;type=VOICE;type=pref:+1 (613) 302-4493
-item1.ADR;type=HOME;type=pref:;;1403\nHalton Terr;Kanata;ON;K2K 2P9;Canada
-item1.X-ABADR:ca
-item2.URL;type=pref:www.pvmr.ca
-item2.X-ABLabel:_$!<HomePage>!$_
-END:VCARD
+BEGIN:VCARD
+
+VERSION:3.0
+
+PRODID:-//Apple Inc.//iPhone OS 15.3.1//EN
+
+N:Pulagam;Vamsi ;;;
+
+FN:Vamsi  Pulagam
+
+ORG:TRU Realty Brokerage;
+
+TITLE:Realestate Sales Representative 
+
+EMAIL;type=INTERNET;type=HOME;type=pref:vamsi@pvmr.ca
+
+TEL;type=CELL;type=VOICE;type=pref:+1 (613) 302-4493
+
+item1.ADR;type=HOME;type=pref:;;1403\nHalton Terr;Kanata;ON;K2K 2P9;Canada
+
+item1.X-ABADR:ca
+
+item2.URL;type=pref:www.pvmr.ca
+
+item2.X-ABLabel:_$!<HomePage>!$_
+
+END:VCARD
+

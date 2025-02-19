@@ -34,6 +34,36 @@
             color: #ffcc00;
             margin-bottom: 20px;
         }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+        }
+        /* Responsive adjustments for mobile */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            .icon {
+                font-size: 80px;
+            }
+            table {
+                display: block;
+                width: 100%;
+            }
+            td {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding-bottom: 20px;
+            }
+            img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -44,14 +74,15 @@
         <h3>https://pvmr.ca</h3>
         <h1> Vamsi Pulagam</h1>
         <h2> Realestate Sales Representative</h2>
-        <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+        <table>
             <tr>
-                <td style="padding: 8px;">
-                  <img src="assets/1originalpng-Copy.png" alt="TRU Realty Brokerage" style="max-width: 100px; margin-top: 20px;">
+                <td>
+                  <img src="assets/1originalpng-Copy.png" alt="TRU Realty Brokerage" style="max-width: 100%; margin-top: 20px;">
                 </td>
-                <td style="padding: 8px;"><b> TRU Realty Brokerage</b>
-                  <br>403 Bank Street, Staples Studio 
-                  <br> Ottawa, ON K2P 1Y6
+                <td>
+                  <b>TRU Realty Brokerage</b><br>
+                  403 Bank Street, Staples Studio<br>
+                  Ottawa, ON K2P 1Y6
                   <p><a href="tel:+13433006200">+1 (343) 300-6200</a></p>
                 </td>
             </tr>

@@ -4,105 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site Under Construction</title>
+    <title>Vamsi Pulagam | TRU Realty Brokerage</title>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-            padding-top: 50px;
+        * {
+            box-sizing: border-box;
         }
+
+        body {
+            background-color: #f7f7f8;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1c1d1f;
+            text-align: center;
+            padding: 40px 15px;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .container {
             margin: 0 auto;
-            max-width: 600px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 620px;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid #ebebeb;
         }
-        h1 {
-            font-size: 48px;
-            color: #3e4142;
-            font-family: 'Montserrat', sans-serif;
-        }
-         h2 {
-            font-size: 30px;
-            color: #3e4142;
-            font-family: 'Montserrat', sans-serif;
-        }
-        p {
-            font-size: 18px;
-            color: #3e4142;
-        }
+
         .icon {
-            font-size: 100px;
-            color: #3e4142;
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 20px;
+            font-size: 56px;
+            margin-bottom: 15px;
+            display: inline-block;
         }
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-            table-layout: fixed;
+
+        .notice-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #111111;
+            letter-spacing: -0.5px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
         }
-        td {
-            padding: 8px;
-            text-align: center;
+
+        .notice-desc {
+            font-size: 15px;
+            color: #666666;
+            margin: 0 0 25px 0;
+            line-height: 1.5;
         }
-        /* Responsive adjustments for mobile */
+
+        .divider {
+            height: 1px;
+            background-color: #ececec;
+            margin: 25px auto;
+            width: 80%;
+        }
+
+        .agent-name {
+            font-size: 28px;
+            font-weight: 800;
+            color: #111111;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 0 4px 0;
+        }
+
+        .agent-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0 0 25px 0;
+        }
+
+        /* Contact Details Card */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 25px;
+            align-items: stretch;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #eeeeee;
+        }
+
+        .logo-box img {
+            max-width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .details-box {
+            background-color: #efc30f;
+            color: #111111;
+            padding: 22px 18px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 13.5px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brokerage-name {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .address {
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #222;
+        }
+
+        .contact-lines {
+            font-size: 13px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 8px;
+        }
+
+        .contact-lines a {
+            color: #111111;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-lines a:hover {
+            text-decoration: underline;
+        }
+
+        .website-link {
+            display: inline-block;
+            margin-top: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #888888;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .website-link:hover {
+            color: #111111;
+        }
+
+        /* Mobile Layout */
         @media (max-width: 600px) {
-            h1 {
-                font-size: 36px;
+            .container {
+                padding: 30px 20px;
             }
-            h2 {
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .agent-name {
                 font-size: 22px;
             }
-            .icon {
-                font-size: 80px;
+
+            .notice-title {
+                font-size: 20px;
             }
-            table {
-                display: block;
-                width: 100%;
-            }
-            td {
-                display: block;
-                width: 100%;
+
+            .details-box {
                 text-align: center;
-                padding-bottom: 20px;
-            }
-            img {
-                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-      <div class="icon">🚧</div>
-      <h1>Site Under Construction</h1>
-        <p>We are working hard to bring you a new experience. Stay tuned!</p>
-        <h3>https://pvmr.ca</h3>
-        <h1> Vamsi Pulagam</h1>        
-        <h2> Realestate Sales Representative</h2>
-        <!--
-        Rental Application <a href="assets/410 - Rental Application - Residential.pdf" target="_blank">Download/View</a>
-        <embed src="assets/410 - Rental Application - Residential.pdf" width="600" height="500" type="application/pdf">
-        <p><a href="https://www.equifax.ca/personal/education/credit-report/articles/-/learn/how-to-get-a-free-credit-report/">How to get a free credit report from Equifax?</a></p>
-        -->
-        <table>
-            <tr>
-                <td>
-                  <img src="assets/1originalpng-Copy.png" alt="TRU Realty Brokerage" style="max-width: 50%; margin-top: 20px;">
-                </td>
-                <td style="background-color: #efc30f;">
-                  <b>TRU Realty Brokerage</b><br>
-                  403 Bank Street, Staples Studio<br>
-                  Ottawa, ON K2P 1Y6
-                  <p><a href="tel:+13433006200">+1 (343) 300-6200</a></p>
-                </td>
-            </tr>
-        </table>
+        <div class="icon">🚧</div>
+        <h1 class="notice-title">Site Under Construction</h1>
+        <p class="notice-desc">We are working hard to bring you a new experience. Stay tuned!</p>
+        
+        <div class="divider"></div>
+
+        <h2 class="agent-name">Vamsi Pulagam</h2>
+        <div class="agent-title">Realtor®</div>
+
+        <div class="info-grid">
+            <div class="logo-box">
+                <img src="assets/1originalpng-Copy.png" alt="TRU Realty Brokerage">
+            </div>
+            
+            <div class="details-box">
+                <div class="brokerage-name">TRU Realty Brokerage</div>
+                <div class="address">
+                    403 Bank Street, Staples Studio<br>
+                    Ottawa, ON K2P 1Y6
+                </div>
+                <div class="contact-lines">
+                    <div><strong>O:</strong> <a href="tel:+13433006200">+1 (343) 300-6200</a></div>
+                    <div><strong>M:</strong> <a href="tel:+16133024493">+1 (613) 302-4493</a></div>
+                    <div><strong>Email:</strong> <a href="mailto:pvmreddy@msn.com">pvmreddy@msn.com</a></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://pvmr.ca" class="website-link">pvmr.ca</a>
     </div>
 </body>
 </html>
